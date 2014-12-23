@@ -25,7 +25,7 @@ class BlacklistSessionEndpoint
 	def self.all
 		endpoints = []
 		BLACKLISTED_ENDPOINTS.each do |endpoint|
-			BlacklistSessionEndpoint.new(endpoint)
+			endpoints << BlacklistSessionEndpoint.new(endpoint)
 		end
 		endpoints
 	end
